@@ -1,0 +1,31 @@
+package com.example.timedemo;
+
+public class TimerDemoCode {
+
+    /*        final Handler handler = new Handler();
+
+        Runnable run = new Runnable() {
+            @Override
+            public void run() {
+                Log.i("hey it's us, ", "a second has passed");
+
+                handler.postDelayed(this, 1000);
+            }
+        };
+
+        handler.post(run);
+    */
+
+//    new CountDownTimer(10000, 1000){
+//
+//        @Override
+//        public void onTick(long milliSecondsUntilDone) {
+//            Log.i("Seconds left ", String.valueOf(milliSecondsUntilDone / 1000));
+//        }
+//
+//        @Override
+//        public void onFinish() {
+//            Log.i("We're done!", "No more countdown");
+//        }
+//    }.start();
+}
