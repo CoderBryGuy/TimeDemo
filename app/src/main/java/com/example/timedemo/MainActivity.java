@@ -25,11 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void toggleTimer(View view){
 
-        mySeekBar.setEnabled(false);
-
-        if(!timerActive) {
+         if(!timerActive) {
 
             timerActive = true;
+            mySeekBar.setEnabled(false);
             button.setText("STOP!");
             stopMediaPlayerIfRunning();
 
