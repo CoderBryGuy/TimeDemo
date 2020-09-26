@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TimeDemo</string>
+    <string name="goMsg">GO!</string>
 </resources>
