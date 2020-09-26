@@ -32,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
             timerActive = true;
             button.setText("STOP!");
             stopMediaPlayerIfRunning();
-            resetTimer();
 
-
-           countDownTimer = new CountDownTimer(secondsFromSeekBar * 1000, 1000) {
+            countDownTimer = new CountDownTimer(secondsFromSeekBar * 1000, 1000) {
 
                 @Override
                 public void onTick(long milliSecondsUntilDone) {
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onFinish() {
-
                      ringBuzzer();
                      resetTimer();
                      }
