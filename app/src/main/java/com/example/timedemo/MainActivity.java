@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView myTextView;
     SeekBar mySeekBar;
     Button button;
-    MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayerBuzzer;
     boolean timerActive = false;
     CountDownTimer countDownTimer;
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             timerActive = true;
             mySeekBar.setEnabled(false);
             button.setText("STOP!");
-            stopMediaPlayerIfRunning();
+            stopStopBuzzerIfRunning();
 
             countDownTimer = new CountDownTimer(secondsFromSeekBar * 1000, 1000) {
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }.start();
         }else {
             resetTimer();
-            stopMediaPlayerIfRunning();
+            stopStopBuzzerIfRunning();
         }
 
     }
@@ -61,18 +61,18 @@ public class MainActivity extends AppCompatActivity {
         button.setText(R.string.goMsg);
     }
 
-    private void stopMediaPlayerIfRunning() {
-        if (mediaPlayer != null) {
-            if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
+    private void stopStopBuzzerIfRunning() {
+        if (mediaPlayerBuzzer != null) {
+            if (mediaPlayerBuzzer.isPlaying()) {
+                mediaPlayerBuzzer.stop();
+                mediaPlayerBuzzer.release();
             }
         }
     }
 
     private void ringBuzzer() {
-        mediaPlayer = MediaPlayer.create(this, R.raw.school_bell_sound);
-        mediaPlayer.start();
+        mediaPlayerBuzzer = MediaPlayer.create(this, R.raw.school_bell_sound);
+        mediaPlayerBuzzer.start();
     }
 
     private void updateMyTextView(long secondsFromSeekBar, TextView myTextView ){
